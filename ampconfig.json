@@ -1,0 +1,19 @@
+{
+  "dataServiceGeneratorVersion": "0.12.6",
+  "appInfo": {
+    "name": "Wezzy",
+    "description": "Wezzy headless commerce platform",
+    "version": "55r67t7t",
+    "id": "cl2pbvphq162895201s6oogjzw7m",
+    "url": "https://app.amplication.com/cl2pbvphq162895201s6oogjzw7m",
+    "settings": {
+      "dbHost": "localhost",
+      "dbName": "",
+      "dbPassword": "admin",
+      "dbPort": 5432,
+      "dbUser": "admin",
+      "appId": "cl2pbvphq162895201s6oogjzw7m",
+      "authProvider": "Jwt"
+    }
+  }
+}
