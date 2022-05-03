@@ -41,7 +41,7 @@ class CategoryUpdateInput {
   @Field(() => CategoryUpdateManyWithoutCategoriesInput, {
     nullable: true,
   })
-  categories?: CategoryUpdateManyWithoutCategoriesInput;
+  children?: CategoryUpdateManyWithoutCategoriesInput;
 
   @ApiProperty({
     required: false,

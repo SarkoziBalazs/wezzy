@@ -5,7 +5,7 @@ import { ProductUpdateManyWithoutCategoriesInput } from "./ProductUpdateManyWith
 
 export type CategoryUpdateInput = {
   asset?: AssetWhereUniqueInput | null;
-  categories?: CategoryUpdateManyWithoutCategoriesInput;
+  children?: CategoryUpdateManyWithoutCategoriesInput;
   name?: string | null;
   parent?: CategoryWhereUniqueInput | null;
   products?: ProductUpdateManyWithoutCategoriesInput;

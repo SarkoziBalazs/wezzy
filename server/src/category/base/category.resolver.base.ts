@@ -190,11 +190,11 @@ export class CategoryResolverBase {
     action: "read",
     possession: "any",
   })
-  async categories(
+  async children(
     @graphql.Parent() parent: Category,
     @graphql.Args() args: CategoryFindManyArgs
   ): Promise<Category[]> {
-    const results = await this.service.findCategories(parent.id, args);
+    const results = await this.service.findChildren(parent.id, args);
 
     if (!results) {
       return [];
