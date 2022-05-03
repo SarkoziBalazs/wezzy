@@ -309,19 +309,19 @@ export class CategoryControllerBase {
     defaultAuthGuard.DefaultAuthGuard,
     nestAccessControl.ACGuard
   )
-  @common.Get("/:id/categories")
+  @common.Get("/:id/children")
   @nestAccessControl.UseRoles({
     resource: "Category",
     action: "read",
     possession: "any",
   })
   @ApiNestedQuery(CategoryFindManyArgs)
-  async findManyCategories(
+  async findManyChildren(
     @common.Req() request: Request,
     @common.Param() params: CategoryWhereUniqueInput
   ): Promise<Category[]> {
     const query = plainToClass(CategoryFindManyArgs, request.query);
-    const results = await this.service.findCategories(params.id, {
+    const results = await this.service.findChildren(params.id, {
       ...query,
       select: {
         asset: {
@@ -357,18 +357,18 @@ export class CategoryControllerBase {
     defaultAuthGuard.DefaultAuthGuard,
     nestAccessControl.ACGuard
   )
-  @common.Post("/:id/categories")
+  @common.Post("/:id/children")
   @nestAccessControl.UseRoles({
     resource: "Category",
     action: "update",
     possession: "any",
   })
-  async connectCategories(
+  async connectChildren(
     @common.Param() params: CategoryWhereUniqueInput,
     @common.Body() body: CategoryWhereUniqueInput[]
   ): Promise<void> {
     const data = {
-      categories: {
+      children: {
         connect: body,
       },
     };
@@ -384,18 +384,18 @@ export class CategoryControllerBase {
     defaultAuthGuard.DefaultAuthGuard,
     nestAccessControl.ACGuard
   )
-  @common.Patch("/:id/categories")
+  @common.Patch("/:id/children")
   @nestAccessControl.UseRoles({
     resource: "Category",
     action: "update",
     possession: "any",
   })
-  async updateCategories(
+  async updateChildren(
     @common.Param() params: CategoryWhereUniqueInput,
     @common.Body() body: CategoryWhereUniqueInput[]
   ): Promise<void> {
     const data = {
-      categories: {
+      children: {
         set: body,
       },
     };
@@ -411,18 +411,18 @@ export class CategoryControllerBase {
     defaultAuthGuard.DefaultAuthGuard,
     nestAccessControl.ACGuard
   )
-  @common.Delete("/:id/categories")
+  @common.Delete("/:id/children")
   @nestAccessControl.UseRoles({
     resource: "Category",
     action: "update",
     possession: "any",
   })
-  async disconnectCategories(
+  async disconnectChildren(
     @common.Param() params: CategoryWhereUniqueInput,
     @common.Body() body: CategoryWhereUniqueInput[]
   ): Promise<void> {
     const data = {
-      categories: {
+      children: {
         disconnect: body,
       },
     };

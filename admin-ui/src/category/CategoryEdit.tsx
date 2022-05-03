@@ -23,7 +23,7 @@ export const CategoryEdit = (props: EditProps): React.ReactElement => {
           <SelectInput optionText={AssetTitle} />
         </ReferenceInput>
         <ReferenceArrayInput
-          source="categories"
+          source="children"
           reference="Category"
           parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
           format={(value: any) => value && value.map((v: any) => v.id)}

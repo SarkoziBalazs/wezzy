@@ -33,7 +33,7 @@ class Category {
   @ValidateNested()
   @Type(() => Category)
   @IsOptional()
-  categories?: Array<Category>;
+  children?: Array<Category>;
 
   @ApiProperty({
     required: true,

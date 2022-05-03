@@ -5,7 +5,7 @@ import { ProductCreateNestedManyWithoutCategoriesInput } from "./ProductCreateNe
 
 export type CategoryCreateInput = {
   asset?: AssetWhereUniqueInput | null;
-  categories?: CategoryCreateNestedManyWithoutCategoriesInput;
+  children?: CategoryCreateNestedManyWithoutCategoriesInput;
   name?: string | null;
   parent?: CategoryWhereUniqueInput | null;
   products?: ProductCreateNestedManyWithoutCategoriesInput;

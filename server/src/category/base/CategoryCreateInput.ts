@@ -41,7 +41,7 @@ class CategoryCreateInput {
   @Field(() => CategoryCreateNestedManyWithoutCategoriesInput, {
     nullable: true,
   })
-  categories?: CategoryCreateNestedManyWithoutCategoriesInput;
+  children?: CategoryCreateNestedManyWithoutCategoriesInput;
 
   @ApiProperty({
     required: false,

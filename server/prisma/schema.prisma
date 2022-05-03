@@ -89,17 +89,17 @@ model Discount {
 }
 
 model Category {
-  asset      Asset?     @relation(fields: [assetId], references: [id])
-  assetId    String?
-  categories Category[] @relation(name: "parent")
-  createdAt  DateTime   @default(now())
-  id         String     @id @default(cuid())
-  name       String?
-  parent     Category?  @relation(name: "parent", fields: [parentId], references: [id])
-  parentId   String?
-  products   Product[]
-  slug       String?
-  updatedAt  DateTime   @updatedAt
+  asset     Asset?     @relation(fields: [assetId], references: [id])
+  assetId   String?
+  children  Category[] @relation(name: "children")
+  createdAt DateTime   @default(now())
+  id        String     @id @default(cuid())
+  name      String?
+  parent    Category?  @relation(name: "children", fields: [parentId], references: [id])
+  parentId  String?
+  products  Product[]
+  slug      String?
+  updatedAt DateTime   @updatedAt
 }
 
 model Asset {

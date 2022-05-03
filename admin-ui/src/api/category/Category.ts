@@ -3,7 +3,7 @@ import { Product } from "../product/Product";
 
 export type Category = {
   asset?: Asset | null;
-  categories?: Array<Category>;
+  children?: Array<Category>;
   createdAt: Date;
   id: string;
   name: string | null;

@@ -14,7 +14,6 @@ import { ApiProperty } from "@nestjs/swagger";
 import { AssetWhereUniqueInput } from "../../asset/base/AssetWhereUniqueInput";
 import { ValidateNested, IsOptional } from "class-validator";
 import { Type } from "class-transformer";
-import { CategoryListRelationFilter } from "./CategoryListRelationFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { ProductListRelationFilter } from "../../product/base/ProductListRelationFilter";
@@ -31,18 +30,6 @@ class CategoryWhereInput {
     nullable: true,
   })
   asset?: AssetWhereUniqueInput;
-
-  @ApiProperty({
-    required: false,
-    type: () => CategoryListRelationFilter,
-  })
-  @ValidateNested()
-  @Type(() => CategoryListRelationFilter)
-  @IsOptional()
-  @Field(() => CategoryListRelationFilter, {
-    nullable: true,
-  })
-  categories?: CategoryListRelationFilter;
 
   @ApiProperty({
     required: false,

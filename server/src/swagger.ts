@@ -7,7 +7,7 @@ export const swaggerDocumentOptions = new DocumentBuilder()
   .setDescription(
     'Wezzy headless commerce platform\n\n## Congratulations! Your application is ready.\n  \nPlease note that all endpoints are secured with JWT Bearer authentication.\nBy default, your app comes with one user with the username "admin" and password "admin".\nLearn more in [our docs](https://docs.amplication.com)'
   )
-  .setVersion("55r67t7t")
+  .setVersion("hlco4ll4")
   .addBearerAuth()
   .build();
 

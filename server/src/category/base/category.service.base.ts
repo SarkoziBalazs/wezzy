@@ -47,7 +47,7 @@ export class CategoryServiceBase {
     return this.prisma.category.delete(args);
   }
 
-  async findCategories(
+  async findChildren(
     parentId: string,
     args: Prisma.CategoryFindManyArgs
   ): Promise<Category[]> {
@@ -55,7 +55,7 @@ export class CategoryServiceBase {
       .findUnique({
         where: { id: parentId },
       })
-      .categories(args);
+      .children(args);
   }
 
   async findProducts(
